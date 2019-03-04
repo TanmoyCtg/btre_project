@@ -80,18 +80,30 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': '1122',
-        'HOST': 'localhost',
-        'PORT': ''
-
+# 
+if 'RDS_HOSTNAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ['aa17f3e2u32xshj'],
+            'USER': os.environ['master'],
+            'PASSWORD': os.environ['Prolific21367'],
+            'HOST': os.environ['aa17f3e2u32xshj.caeo5i6lrkbf.us-west-2.rds.amazonaws.com'],
+            'PORT': os.environ['5432'],
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'myproject',
+            'USER': 'myprojectuser',
+            'PASSWORD': '1122',
+            'HOST': 'localhost',
+            'PORT': ''
+
+        }
+    }
 
 
 # Password validation
