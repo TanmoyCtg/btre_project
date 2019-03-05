@@ -9,7 +9,7 @@ db.sqlite3
 /media
 venv
 /static
-
+.vscode
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
