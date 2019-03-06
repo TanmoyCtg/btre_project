@@ -80,7 +80,6 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-<<<<<<< HEAD
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
@@ -90,18 +89,6 @@ if 'RDS_DB_NAME' in os.environ:
             'PASSWORD': os.environ['RDS_PASSWORD'],
             'HOST': os.environ['RDS_HOSTNAME'],
             'PORT': os.environ['RDS_PORT'],
-=======
-# 
-if 'RDS_HOSTNAME' in os.environ:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': os.environ['aa17f3e2u32xshj'],
-            'USER': os.environ['master'],
-            'PASSWORD': os.environ['Prolific21367'],
-            'HOST': os.environ['aa17f3e2u32xshj.caeo5i6lrkbf.us-west-2.rds.amazonaws.com'],
-            'PORT': os.environ['5432'],
->>>>>>> b16df851378dd2d4c9853bbb5958c19eb232dc69
         }
     }
 else:
@@ -110,11 +97,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'myproject',
             'USER': 'myprojectuser',
-<<<<<<< HEAD
             'PASSWORD': '',
-=======
-            'PASSWORD': '1122',
->>>>>>> b16df851378dd2d4c9853bbb5958c19eb232dc69
             'HOST': 'localhost',
             'PORT': ''
 
@@ -176,11 +159,12 @@ MESSAGE_TAGS = {
 }
 
 # Email Config
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'ciftekharulislam@gmail.com'
-# EMAIL_HOST_PASSWORD = 'suma@!21367'
-# EMAIL_USE_TLS=True 
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'prolificanlyticsinc@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS=True 
 
 
 
