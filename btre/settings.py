@@ -97,7 +97,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'myproject',
             'USER': 'myprojectuser',
-            'PASSWORD': '',
+            'PASSWORD': '1122',
             'HOST': 'localhost',
             'PORT': ''
 
