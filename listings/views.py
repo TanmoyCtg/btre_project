@@ -46,12 +46,14 @@ def search(request):
     if 'state' in request.GET:
         state = request.GET['state']
         if state:
+            # case insensitive
             queryset_list = queryset_list.filter(state__iexact=state)
 
     #Bedrooms
     if 'bedrooms' in request.GET:
         bedrooms = request.GET['bedrooms']
         if bedrooms: 
+            # less than or equal to
             queryset_list = queryset_list.filter(bedrooms__lte=bedrooms)
     
     # Price 

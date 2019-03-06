@@ -25,7 +25,7 @@ SECRET_KEY = '!jsy-$vwbn(d01rgema-2g4onc_qd#yy_da1m$(w2^$@g06#t%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://btreproject-env.zpfiz3jphe.us-west-2.elasticbeanstalk.com/']
 
 
 # Application definition
@@ -80,6 +80,7 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+<<<<<<< HEAD
 if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
@@ -89,6 +90,18 @@ if 'RDS_DB_NAME' in os.environ:
             'PASSWORD': os.environ['RDS_PASSWORD'],
             'HOST': os.environ['RDS_HOSTNAME'],
             'PORT': os.environ['RDS_PORT'],
+=======
+# 
+if 'RDS_HOSTNAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ['aa17f3e2u32xshj'],
+            'USER': os.environ['master'],
+            'PASSWORD': os.environ['Prolific21367'],
+            'HOST': os.environ['aa17f3e2u32xshj.caeo5i6lrkbf.us-west-2.rds.amazonaws.com'],
+            'PORT': os.environ['5432'],
+>>>>>>> b16df851378dd2d4c9853bbb5958c19eb232dc69
         }
     }
 else:
@@ -97,7 +110,11 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'myproject',
             'USER': 'myprojectuser',
+<<<<<<< HEAD
             'PASSWORD': '',
+=======
+            'PASSWORD': '1122',
+>>>>>>> b16df851378dd2d4c9853bbb5958c19eb232dc69
             'HOST': 'localhost',
             'PORT': ''
 

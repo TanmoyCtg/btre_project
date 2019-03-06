@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 
+=======
+.py[cod]
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+/media
+venv
+/static
+.vscode
+>>>>>>> b16df851378dd2d4c9853bbb5958c19eb232dc69
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
