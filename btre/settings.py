@@ -97,7 +97,7 @@ else:
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'myproject',
             'USER': 'myprojectuser',
-            'PASSWORD': '1122',
+            'PASSWORD': '',
             'HOST': 'localhost',
             'PORT': ''
 
@@ -142,7 +142,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 
-STATIC_ROOT= os.path.join(BASE_DIR, "..", "www", 'static')
+STATIC_ROOT= os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'btre/static')
