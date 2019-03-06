@@ -25,7 +25,7 @@ SECRET_KEY = '!jsy-$vwbn(d01rgema-2g4onc_qd#yy_da1m$(w2^$@g06#t%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://btreproject-env.zpfiz3jphe.us-west-2.elasticbeanstalk.com/']
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
